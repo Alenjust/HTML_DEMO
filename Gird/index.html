@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Vue.js Grid Template</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link rel="stylesheet" href="./css/processed.css">
+		<script src="./js/vue.js"></script>
+	</head>
+	<body>
+		<script type="text/x-template" id="page-head">
+			<header>
+      <h1>Grid Template</h1>
+    </header>
+  </script>
+		<script type="text/x-template" id="grid">
+			<div class="grid">
+    	<transition-group name="pop">
+			  <div class="color" v-for="(color, index) in colors" v-bind:key="{index}" v-bind:style="{ backgroundColor: color.hex }"></div>
+      </transition-group>
+    </div>
+  </script>
+
+		<div id="demo">
+			<page-head></page-head>
+			<grid :colors="colors"></grid>
+		</div>
+		<script src="./js/components.js"></script>
+		<script src="./js/index.js"></script>
+	</body>
+</html>

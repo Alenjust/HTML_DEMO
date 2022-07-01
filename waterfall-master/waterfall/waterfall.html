@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>瀑布流布局</title>
+	<!-- <link rel="stylesheet" type="text/css" href="waterfall.css"> -->
+	<style type="text/css">
+		#waterfall{
+			position: relative;
+		}
+		.box{
+			padding: 15px 0 0 10px;
+			float: left;
+		}
+		.pic{
+			padding: 10px;
+			border: 1px solid #5D5D5F; 
+			border-radius: 5px;
+			box-shadow: 0 0 5px #5D5D5F;
+		}
+
+		.pic img{
+			width:230px;
+			height: auto;
+		}
+	</style>
+	<script type="text/javascript" src="./waterfall.js"></script>
+</head>
+<body>
+	<div id="waterfall">
+		<div class="box">
+			<div class="pic">
+				<img src="Image/1.jpg" alt="picture1" />	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/10.jpg" alt="picture2">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/26.jpg" alt="picture3">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/29.jpg" alt="picture29">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/14.jpg" alt="picture4">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/27.jpg" alt="picture5">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/16.jpg" alt="picture6">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/3.jpg" alt="picture7">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/30.jpg" alt="picture30">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/22.jpg" alt="picture8">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/6.jpg" alt="picture9">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/4.jpg" alt="picture10">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/31.jpg" alt="picture31">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/17.jpg" alt="picture11">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/18.jpg" alt="picture12">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/5.jpg" alt="picture13">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/32.jpg" alt="picture32">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/19.jpg" alt="picture14">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/33.jpg" alt="picture33">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/20.jpg" alt="picture15">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/15.jpg" alt="picture16">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/13.jpg" alt="picture17">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/34.jpg" alt="picture34">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/7.jpg" alt="picture18">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/35.jpg" alt="picture35">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/9.jpg" alt="picture19">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/21.jpg" alt="picture20">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/8.jpg" alt="picture21">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/36.jpg" alt="picture36">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/23.jpg" alt="picture22">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/11.jpg" alt="picture23">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/2.jpg" alt="picture24">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/12.jpg" alt="picture25">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/25.jpg" alt="picture26">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/28.jpg" alt="picture27">	
+			</div>
+		</div>
+		<div class="box">
+			<div class="pic">
+				<img src="Image/24.jpg" alt="picture28">	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

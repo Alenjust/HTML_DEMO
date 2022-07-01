@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport"
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style>
+	/* 清除浏览器默认样式 */
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box {
+			display: flex;
+			/* 作用在父级元素上 */
+			
+			/* flex排列方式属性 flex-direction: */
+			/* flex-direction: row;//行排列(默认) */
+			/* flex-direction: column;//列排列 */
+			/* flex-direction: column-reverse;//倒序列排列,起始点从左下端开始 */
+			/* flex-direction: row-reverse;//行倒序排列,起始点从右端开始 */
+
+			/*  flex-wrap是否换行 换行的前提是元素大小发生改变父级盒子无法容纳*/
+			/* flex-wrap: nowrap;//不换行(默认)  但压缩内部其他元素 */
+			/* flex-wrap: wrap;//换行 换到下方 添加该属性元素会从上方开始排列(默认)*/
+			/* flex-wrap: wrap-reverse;//换行 换到上方 添加该属性元素会从下方开始排列 */
+			
+			/* flex-flow:属性是 flex-direction和flex-wrap的合拼简写; */
+			/* flex-flow: column-reverse wrap;//就是排列方式为列倒序排列和换行 */
+			
+			/* 水平方向  justify-content: ;*/
+			/* justify-content: center;//中心对齐 */
+			/* justify-content: flex-start; //左对齐(默认) */
+			/* justify-content: flex-end;//右对齐 */
+			/* justify-content: space-around;//首尾元素外侧间距相等，中间相距相等   简单说就是外侧的距离是内侧的一半 */
+			/* justify-content: space-between;//元素与元素之间间隔相等 */
+			/* justify-content: space-evenly; //均匀对齐，元素间间距相等 */
+			
+			/* 垂直方向 	align-items:-->;*/
+			/* align-items: stretch;//从如果项目未设置高度或设为auto，将占满整个容器的高度。 */
+			/* align-items: flex-start;//从左上端点开始 */
+			/* align-items: flex-end;//从左下端点开始 */
+			/* align-items: center;	//从左中端点开始 */
+			/* align-items: baseline;//容器内的第一行文字的基线对齐 */
+			
+			/* align-content:属性是在多行元素时才起作用 例如以下例子 单独设置justify-content: center;align-items: center;居中无法实现div合在一起,它们之间会有空隙,只需添加align-content: center;属性就行,
+			不过添加align-content:属性之前要把flex布局设置为换行(默认为不换行) */
+			/* 垂直居中 */
+			justify-content: center;
+			align-items: center;
+			/* flex-wrap: wrap; */
+			/* align-content: center;//属性值与 justify-content相同 */
+			width: 100%;
+			height: 500px;
+		}
+
+		.one {
+			width: 20%;
+			height: 100px;
+			background-color: blue;
+			/* 作用在子元素上 */
+			/* order: 3;//order属性定义元素的排列顺序。数值越小，排列越靠前，默认为0。 */
+			/* flex-grow: 1;//flex-grow属性定义元素的放大比例，会把剩余空间全部占满,默认为0，即如果存在剩余空间，也不放大。 */
+			/* flex-shrink: 2;//flex-shrink属性定义了元素的缩小比例，默认为1，即如果空间不足，该项目将缩小。 */
+			/* flex-basis: auto;//flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。它可以设为跟width或height属性一样的值（比如350px），则项目将占据固定空间。 */
+			/* flex: none;//flex属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。该属性有两个快捷值：auto (1 1 auto) 和 none (0 0 auto)。建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。 */
+			
+			/* align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch。 */
+			/* align-self: center;//垂直居中 */
+			/* align-self: flex-start;//左上端开始 */
+			/* align-self: flex-end;//左下端开始 */
+			/* align-self: auto;//默认 */
+		}
+
+		.two {
+			width: 20%;
+			height: 100px;
+			background-color: green;
+			/* font-size: 16px; */
+		}
+
+		.three {
+			width: 20%;
+			height: 100px;
+			background-color: red;
+		}
+		.content{
+			display: flex;
+			width: 100%;
+			height: 500px;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+
+	<body>
+		<div class="box">
+			<div class="one">2132435</div>
+			<div class="two">213216545</div>
+			<div class="three">2341654</div>
+			<!-- <div class="one">2132435</div>
+			<div class="two">213216545</div>
+			<div class="three">2341654</div>
+			<div class="one">2132435</div>
+			<div class="two">213216545</div>
+			<div class="three">2341654</div>
+			<div class="one">2132435</div> -->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">开关灯</button>
+    <script>
+        var btn = document.getElementById('btn');//获取元素
+        var flag = 0;//初始化开关灯的状态 0为关灯 1为开灯
+        btn.onclick = function() {//给按钮绑定事件
+            if (flag == 0) {//如果状态为0
+                document.body.style.backgroundColor = 'black';//设置背景颜色为黑色
+                flag = 1;//改变状态为1
+            } else {//如果状态为1
+                document.body.style.backgroundColor = '#fff';//设置背景颜色为白色
+                flag = 0;//改变状态为0
+            }
+        }
+    </script>
+</body>
+
+</html>

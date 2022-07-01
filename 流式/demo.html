@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+
+		<style>
+			body {
+				margin: 4px;
+				font-family: Arial, Helvetica, sans-serif;
+				background-color: #008000;
+			}
+
+			.masonry {
+				column-count: 5;
+				column-gap: 0;
+			}
+
+			.item {
+				/* padding: 2px; */
+				position: relative;
+				/* 计数器递增 第一参数为计数器名称（必写） 第二参数为初始值 默认为1 */
+				counter-increment: item-counter;
+				margin-right: 10px;
+				margin-top: 10px;
+				transition: all .3s;
+				/* 为了控制文本块分解成单独的列，以免项目列表的内容跨列，破坏整体的布局。 */
+				break-inside: avoid;
+				box-sizing: border-box;
+			}
+
+			.item img {
+
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 10px;
+				z-index: 9;
+
+			}
+
+			.item::after {
+				position: absolute;
+				display: block;
+				top: 2px;
+				left: 50%;
+				width: 24px;
+				height: 24px;
+				line-height: 24px;
+				text-align: center;
+				background-color: #000;
+				color: #fff;
+
+			}
+
+			img:hover {
+				/* margin-top: -3px; */
+
+				animation: bounceIn 0.3s ease-in 2 alternate;
+			}
+
+			.item:hover .display {
+				position: absolute;
+				left: 0;
+				top: 0;
+				cursor: pointer;
+				/* background-color: red; */
+				height: 100%;
+				width: 100%;
+				z-index: 10;
+				/* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+				border-radius: 10px;
+				background-color: rgba(0, 0, 0, .3);
+				transition: all .3;
+				/* animation: bounceIn 0.3s  ease-in 2 alternate; */
+
+				/* 计数器 */
+				content: counter(item-counter);
+			}
+
+			.item:nth-child(5n+1) {
+				order: 1;
+			}
+
+			.item:nth-child(5n+2) {
+				order: 2;
+			}
+
+			.item:nth-child(5n+3) {
+				order: 3;
+			}
+
+			.item:nth-child(5n+4) {
+				order: 4;
+			}
+
+			.item:nth-child(5n+5) {
+				order: 5;
+			}
+
+
+			@keyframes bounceIn {
+				100% {
+					/* 向上移动3px */
+					transform: translateY(-3px);
+					/* 放大1.02倍 */
+					transform: scale(1.02);
+					margin-top: -3px;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="masonry" id="masonry">
+			<!-- <div class="item">
+            <img src="https://picsum.photos/360/460?random=1" >
+        </div> -->
+
+
+
+		</div>
+
+		<script>
+			//生成 100到400之间的随机数
+			//生成50次 随机的照片
+			for (var i = 0; i < 100; i++) {
+				var num = parseInt(Math.random() * (400 - 100 + 1) + 100)
+				var num1 = parseInt(Math.random() * (400 - 100 + 1) + 100)
+				var num2 = parseInt(Math.random() * (50 - 1 + 1) + 1)
+				var newnum = `https://picsum.photos/${num}/${num1}?random=${num2}`
+				var masonry = document.querySelector('#masonry')
+				var item = document.createElement('div')
+				item.className = 'item'
+				var div2 = document.createElement('div') //添加遮罩层
+				div2.className = 'display'
+				item.appendChild(div2)
+				var img = document.createElement('img')
+				img.src = newnum
+				item.appendChild(img)
+				masonry.appendChild(item)
+
+			}
+		</script>
+	</body>
+
+</html>
